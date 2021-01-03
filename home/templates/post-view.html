@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/style.css">
+{% endblock head %}
+
+{% block body %}
+    <div style="height: 100px"></div>
+    <h1>{{ post.title }}</h1>
+    <p style="color: dimgray;">{{ post.date }}</p>
+    <br>
+    <p>{{ post.body }}</p>
+    <img src="static/media/{{post.image}}"/>
+{% endblock %}
